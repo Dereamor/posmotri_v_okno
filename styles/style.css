@@ -43,7 +43,6 @@ ol {
 .content {
   display: flex;
   gap: 30px;
-
 }
 
 .result {
@@ -99,6 +98,7 @@ ol {
   background-color: transparent;
   cursor: pointer;
   word-wrap: break-word;
+  border-radius: 0;
   padding-left: 69px;
   padding-right: 77px;
   margin-bottom: -6px;
@@ -114,6 +114,12 @@ ol {
   text-decoration: none;
  }
 
+ .search-form__submit-button:focus {
+  outline-offset: 2px;
+  border-radius: 0px;
+  outline: 1px solid;
+ }
+
 .search-form__textfield {
   color: rgba(255, 255, 255, 0.70);
   font-family: Fira Sans Condensed;
@@ -127,13 +133,26 @@ ol {
   border: 1px solid #FFF;
   border-left: 0px;
   border-right: 0px;
+  padding: 0;
+}
+
+.search-form__label:has(>input.search-form__textfield:focus) {
+  outline: 1px solid;
+  padding: 2px;
+}
+
+input.search-form__textfield:focus {
+  outline: none;
 }
 
 .search-form__textfield:active {
   outline: 1px solid #fff;
 }
 
-
+.search-form__checkbox-list {
+  display: flex;
+  gap: 10px;
+}
 
 .search-form__fieldset {
   width: fit-content;
@@ -173,6 +192,11 @@ input[type='checkbox']:focus-visible + .search-form__label {
   outline: 1px solid #FFF;
 }
 
+.search-form__label:has(>input.search-form__checkbox:focus) {
+  outline: 1px solid;
+  padding: 1px;
+}
+
 .content__details {
   margin-top: -81px;
   max-width: 100%;
@@ -203,11 +227,13 @@ input[type='checkbox']:focus-visible + .search-form__label {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  max-height: 313px;
+  max-height: 311px;
   overflow: auto;
   margin-top: 30px;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  padding-left: 1px;
+  padding-right: 1px;
 }
 
 .content__list::-webkit-scrollbar {
@@ -219,7 +245,6 @@ input[type='checkbox']:focus-visible + .search-form__label {
   max-width: 394px;
 }
 
-
 .content__list-item:hover {
   text-decoration: underline;
 }
@@ -228,6 +253,15 @@ input[type='checkbox']:focus-visible + .search-form__label {
   background-color:  #545050;
   text-decoration: none;
  }
+
+ .content__list-item:has(>a.content__card-link:focus) {
+  outline: 1px solid;
+  padding: 1px;
+}
+
+a.content__card-link:focus {
+  outline: none;
+}
 
 .content__video-card {
   display: flex;
@@ -289,6 +323,13 @@ input[type='checkbox']:focus-visible + .search-form__label {
   background-color:  #545050;
   text-decoration: none;
  }
+
+ .more-button:focus {
+  outline-offset: 2px;
+  border-radius: 0px;
+  outline: 1px solid;
+ }
+
 
 fieldset {
   border: none;
