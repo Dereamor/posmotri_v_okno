@@ -339,6 +339,7 @@ a.content__card-link:focus {
   padding-bottom: 5px;
   padding-left: 146px;
   padding-right: 146px;
+  margin-bottom: 24px;
 }
 
 .more-button:hover {
